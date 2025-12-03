@@ -51,58 +51,98 @@ small.note{
   color:var(--muted);
   margin-top:2px;
 }
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>仮想プロファイル確認シート｜60分評価テンプレート</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-:root{
-  --bg:#f8faf9;
-  --card:#ffffff;
-  --accent:#00b386;
-  --text:#1a1a1a;
-  --sub:#666;
-  --line:rgba(0,0,0,0.1);
-  --muted:#999;
-  font-family:"Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif;
+
+/* Section / Card */
+.section{
+margin-top:12px;
 }
-*,
-*::before,
-*::after{
-  box-sizing:border-box;
+.card{
+background:var(--card);
+border-radius:10px;
+border:1px solid var(--line);
+box-shadow:0 2px 6px rgba(0,0,0,0.03);
+padding:10px;
 }
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.8;
-  text-rendering:optimizeLegibility;
+.section h2{
+margin:0 0 6px;
+font-size:15px;
 }
-.wrapper{
-  max-width:960px;
-  margin:0 auto;
-  padding:12px 8px 32px;
+.section h3{
+margin:10px 0 4px;
+font-size:13px;
+color:var(--sub);
 }
-header{
-  padding:8px 4px 12px;
-  border-bottom:1px solid var(--line);
+
+/* table */
+.table{
+width:100%;
+border-collapse:collapse;
+margin:6px 0;
 }
-header h1{
-  margin:4px 0 2px;
-  font-size:18px;
+.table th,
+.table td{
+border:1px solid var(--line);
+padding:4px 3px;
+font-size:11px;
+text-align:center;
 }
-header p{
-  margin:0;
-  font-size:11px;
-  color:var(--sub);
+.table thead{
+background:#f3f5f4;
 }
-small.note{
-  display:block;
-  font-size:10px;
-  color:var(--muted);
-  margin-top:2px;
+.table td.label{
+text-align:left;
 }
+
+/* list */
+ul{
+margin:4px 0 6px 16px;
+padding:0;
+}
+li{
+font-size:11px;
+}
+
+/* checkbox */
+.check-group-title{
+margin:8px 0 2px;
+font-size:11px;
+color:var(--muted);
+}
+.check-list{
+border-top:1px dashed var(--line);
+padding-top:6px;
+margin-top:4px;
+}
+.check-item{
+display:flex;
+align-items:center;
+gap:6px;
+font-size:11px;
+margin-bottom:4px;
+}
+.check-item input[type="checkbox"]{
+  width:14px;
+  height:14px;
+}
+
+/* memo */
+.memo-row{
+margin-top:8px;
+}
+.memo-label{
+font-size:11px;
+color:var(--sub);
+margin-bottom:2px;
+}
+.memo-box{
+border:1px solid var(--line);
+border-radius:6px;
+background:#fafbfb;
+min-height:42px;
+font-size:11px;
+padding:4px;
+}
+  
 </style>
 
 </head>
@@ -140,6 +180,7 @@ small.note{
           </tr>
         </tbody>
       </table>
+    </div>
   </section>
   <!-- Standing Band Press -->
   <section class="section">
